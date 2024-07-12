@@ -21,6 +21,14 @@
         <h5> You will Be Contacted For Verfication And Further Steps ahead</h5>
         </form>
     </div>
+    <script>
+        // Check if message exists in URL query parameters (for future enhancement)
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        if (message) {
+            alert(message);
+        }
+    </script>
     
 </body>
 </html>
