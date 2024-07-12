@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <button onclick="showForm('signup')">Signup</button>
+            <button onclick="showForm('login')">Login</button>
+        </div>
+        <div id="signupForm" class="form-container">
+            <h2>Signup</h2>
+            <form action="/signup" method="post">
+                <div class="form-group">
+                    <label for="regd_no">Username:</label>
+                    <input type="text" id="regd_no" name="regd_no" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="Mobile Number">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password">
+                </div>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+        <div id="loginForm" class="form-container" style="display: none;">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="email_login">Email:</label>
+                    <input type="text" id="email_login" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password_login">Password:</label>
+                    <input type="password" id="password_login" name="password" placeholder="Password">
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function showForm(formType) {
+            document.getElementById('signupForm').style.display = formType === 'signup' ? 'block' : 'none';
+            document.getElementById('loginForm').style.display = formType === 'login' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
