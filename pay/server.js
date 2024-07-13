@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-const port = 3001;
+const port = 4000;
 
 const app = express();
 app.use(express.static(__dirname));
